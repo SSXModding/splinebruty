@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
 	}
 
 
-#if 0	
+#if 1	
 	std::cout << strfmt("splines at offset %d\n", header.SplineOffset);
 	
 	ifs.seekg(header.SplineOffset, std::ifstream::beg);
@@ -102,7 +102,7 @@ int main(int argc, char** argv) {
 			SetPosWithFudge(pine, segments[i].matrix.AsVec3());
 			
 			//std::cout << strfmt("Setting to point finished.\n");
-			std::this_thread::sleep_for(std::chrono::milliseconds(950));
+			std::this_thread::sleep_for(std::chrono::milliseconds(1500));
 		} catch(...) {
 			std::cout << strfmt("Trying to set to point failed :(\n");
 			break;
